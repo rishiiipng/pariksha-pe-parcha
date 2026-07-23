@@ -65,5 +65,17 @@ Photographs via [Wikimedia Commons](https://commons.wikimedia.org/), used under 
 Video reporting: [Unfiltered by Samdish](https://www.youtube.com/@UNFILTEREDbySamdish) (embedded from
 YouTube). Day-25 reel: Sonam Wangchuk via Instagram (embedded). All media belongs to its creators.
 
+## Analytics
+Vercel **Web Analytics** + **Speed Insights** (both free on Hobby), loaded from the same-origin
+`/_vercel/…` paths in each page's `<head>`. They only return data on a Vercel deployment —
+locally those paths 404, which is expected.
+
+**They must each be switched on in the Vercel dashboard** (Project → Analytics → Enable, and
+Project → Speed Insights → Enable), otherwise the scripts load but nothing is recorded.
+
+> CSP note: `connect-src` **must** keep `'self'` — the scripts beacon to `/_vercel/insights/view`
+> and `/_vercel/speed-insights/vitals` on the same origin. Dropping `'self'` silently kills all
+> analytics while leaving the page looking fine.
+
 ## Self-check
 Open `claude-pm.html?selftest` and check the console for `petition self-check passed ✅`.
