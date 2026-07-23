@@ -5,9 +5,19 @@ scandal** and the ongoing Jantar Mantar protests. Harsh jokes, **real cited fact
 petition to make Claude the PM of India.
 
 ## Run it
-It's a plain static site — no build step, no server needed.
-- **Double-click `index.html`**, or drag it into a browser.
-- To host: drop the whole folder on GitHub Pages / Netlify / any static host.
+Plain static site — **no build step, no dependencies, no env vars**.
+- Quick look: **double-click `index.html`**.
+- Full experience (embeds + live counter need `http(s)`): run
+  `python -m http.server 8123` and open `http://localhost:8123`.
+
+## Deploy to Vercel
+Already configured — `vercel.json` ships the security headers (CSP, HSTS, nosniff,
+frame-ancestors, permissions-policy).
+1. Import the repo at [vercel.com/new](https://vercel.com/new).
+2. Framework preset **Other** · Build command **(empty)** · Output directory **`.`**
+3. Deploy. No environment variables, no secrets, nothing else to set.
+
+Or from the CLI: `npx vercel --prod`
 
 ## Pages
 | file | what |
