@@ -38,39 +38,13 @@
       </div>
     </section>
 
-    <!-- editorial illustration (original art, NOT a photo) -->
+    <!-- real photograph — freely licensed, credited in the footer -->
     <section style="padding-top:0">
       <div class="wrap">
-        <figure class="illus" aria-label="Illustration: students facing a line of riot shields with tear gas">
-          <svg viewBox="0 0 800 340" role="img" xmlns="http://www.w3.org/2000/svg">
-            <title>Students with placards facing a wall of riot shields, batons raised, tear gas overhead</title>
-            <rect width="800" height="340" fill="#0d0d10"/>
-            <!-- tear gas cloud -->
-            <g fill="#3a3a42" opacity="0.7">
-              <circle cx="430" cy="90" r="40"/><circle cx="470" cy="70" r="34"/><circle cx="500" cy="100" r="40"/>
-              <circle cx="540" cy="80" r="30"/><circle cx="460" cy="110" r="30"/>
-            </g>
-            <!-- students (left) -->
-            <g fill="var(--lime)">
-              <g transform="translate(70,150)"><circle cx="0" cy="0" r="16"/><rect x="-14" y="18" width="28" height="70" rx="12"/></g>
-              <g transform="translate(120,165)"><circle cx="0" cy="0" r="14"/><rect x="-12" y="16" width="24" height="62" rx="10"/></g>
-              <g transform="translate(165,150)"><circle cx="0" cy="0" r="16"/><rect x="-14" y="18" width="28" height="72" rx="12"/></g>
-            </g>
-            <!-- placard -->
-            <g transform="translate(95,60)"><rect x="0" y="0" width="120" height="60" rx="6" fill="var(--pink)"/><rect x="55" y="60" width="8" height="80" fill="#5a5a63"/><text x="60" y="36" font-family="monospace" font-size="20" font-weight="700" text-anchor="middle" fill="#14000a">RE-NEET</text></g>
-            <!-- barricade w/ electrified bolt -->
-            <g transform="translate(340,150)"><rect x="0" y="0" width="16" height="120" fill="#5a5a63"/><rect x="-8" y="20" width="32" height="10" fill="#5a5a63"/>
-              <path d="M4 -6 L-8 26 L4 22 L-4 54 L18 14 L6 18 Z" fill="var(--amber)"/></g>
-            <!-- riot shields (right) -->
-            <g transform="translate(560,150)" fill="var(--red)" opacity="0.92">
-              <g><rect x="0" y="-6" width="40" height="96" rx="8"/><rect x="14" y="-40" width="6" height="40" fill="#8a8a92"/></g>
-              <g transform="translate(52,10)"><rect x="0" y="-6" width="40" height="96" rx="8"/><rect x="14" y="-40" width="6" height="40" fill="#8a8a92"/></g>
-              <g transform="translate(104,-4)"><rect x="0" y="-6" width="40" height="96" rx="8"/><rect x="14" y="-40" width="6" height="40" fill="#8a8a92"/></g>
-            </g>
-            <!-- ground -->
-            <rect x="0" y="300" width="800" height="6" fill="#26262c"/>
-          </svg>
-          <figcaption><span class="tag">illustration</span>original editorial art depicting the 20 July crackdown. for the real footage, see the cards below.</figcaption>
+        <figure class="illus">
+          <img src="img/protest-jantar-mantar.jpg" width="630" height="453" loading="lazy" decoding="async"
+               alt="Crowds of student protesters gathered at Jantar Mantar in New Delhi during the 2026 NEET demonstrations, holding placards and banners.">
+          <figcaption><span class="tag">photo</span>Protesters at Jantar Mantar, New Delhi. Photo by Cockroach Janta Party via <a href="https://commons.wikimedia.org/wiki/File:Protestors_at_Jantar_Mantar.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> (<a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener">CC0</a>).</figcaption>
         </figure>
       </div>
     </section>
@@ -292,19 +266,53 @@
 
   <footer class="footer">
     <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-col foot-brand">
+          <div class="foot-logo"><span class="roach">🪳</span><b>pariksha pe parcha</b></div>
+          <p>a Gen-Z record of the 2026 NEET paper-leak scandal and the Jantar Mantar protests. the jokes are jokes — every fact is sourced and linked.</p>
+        </div>
+        <div class="foot-col">
+          <h4>the receipts</h4>
+          <ul>
+            <li><a href="https://en.wikipedia.org/wiki/2026_NEET_controversy" target="_blank" rel="noopener">NEET 2026 controversy</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/2026_Delhi_Jantar_Mantar_protests" target="_blank" rel="noopener">Jantar Mantar protests</a></li>
+            <li><a href="https://www.ibtimes.co.uk/indian-police-crackdown-student-protests-neet-ug-paper-leak-1809764" target="_blank" rel="noopener">the crackdown, on video</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h4>this site</h4>
+          <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="timeline.html">the receipts</a></li>
+            <li><a href="crimes.html">hall of shame</a></li>
+            <li><a href="claude-pm.html">claude 4 pm</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h4>get in touch</h4>
+          <p>issues, bugs, corrections or takedown requests — mail me and I’ll fix it fast:</p>
+          <a class="foot-mail" href="mailto:Deyayush599@gmail.com">Deyayush599@gmail.com</a>
+        </div>
+      </div>
+
       <p class="disclaimer">
         ⚠️ <b>Satire &amp; political commentary.</b> This is parody. Every hard fact links to a real
-        published source; the jokes, hyperbole, and the "Claude for PM" petition are obviously jokes.
-        Not affiliated with the Government of India, the NTA, Anthropic, or any political party. The
-        petition stores only a count — a public tally with <b>no personal data</b>, ever.
+        published source; the jokes, hyperbole, severity ratings and the “Claude for PM” petition are
+        obviously jokes. Not affiliated with the Government of India, the NTA, Anthropic, or any political
+        party. The petition stores only a count — a public tally with <b>no personal data</b>, ever.
       </p>
-      <p class="sources">
-        receipts:
-        <a href="https://en.wikipedia.org/wiki/2026_NEET_controversy" target="_blank" rel="noopener">NEET 2026 controversy</a> ·
-        <a href="https://en.wikipedia.org/wiki/2026_Delhi_Jantar_Mantar_protests" target="_blank" rel="noopener">Jantar Mantar protests</a>
-      </p>
-      <p class="contact">🛠️ issues, bugs or complaints? → <a href="mailto:Deyayush599@gmail.com">Deyayush599@gmail.com</a></p>
-      <p class="madeby">made with more humanity than the government · 2026</p>
+
+      <div class="foot-bottom">
+        <p class="credits">
+          Photographs via <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons</a>:
+          “Protestors at Jantar Mantar” by Cockroach Janta Party (<a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener">CC0</a>) ·
+          “CJP Protestors holding Bhagat Singh posters” by Pelph Hoters (<a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener">CC0</a>) ·
+          “Sonam Wangchuk taken to hospital” by Pelph Hoters (<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>).
+          Video reporting by <a href="https://www.youtube.com/@UNFILTEREDbySamdish" target="_blank" rel="noopener">Unfiltered by Samdish</a>;
+          day-25 reel by Sonam Wangchuk via Instagram. All media belongs to its creators and is used with credit under its licence.
+        </p>
+        <p class="madeby">made with more humanity than the government · 2026</p>
+      </div>
     </div>
   </footer>
 
