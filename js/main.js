@@ -11,7 +11,7 @@
         e.g. var GOATCOUNTER_CODE = "parikshapeparcha";
      Leave it "" and no analytics script loads at all (no errors, no requests).
      ========================================================================= */
-  var GOATCOUNTER_CODE = "";
+  var GOATCOUNTER_CODE = "rishiii";
 
   if (GOATCOUNTER_CODE) {
     var gc = document.createElement("script");
