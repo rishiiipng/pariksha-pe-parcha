@@ -4,6 +4,23 @@
   "use strict";
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* ============================ ANALYTICS ==================================
+     GoatCounter — free, cookieless, no consent banner required.
+     👉 SETUP (once): make a free site at https://www.goatcounter.com, then put
+        your site code below — it's the "xxxx" in https://xxxx.goatcounter.com
+        e.g. var GOATCOUNTER_CODE = "parikshapeparcha";
+     Leave it "" and no analytics script loads at all (no errors, no requests).
+     ========================================================================= */
+  var GOATCOUNTER_CODE = "";
+
+  if (GOATCOUNTER_CODE) {
+    var gc = document.createElement("script");
+    gc.async = true;
+    gc.src = "https://gc.zgo.at/count.js";
+    gc.setAttribute("data-goatcounter", "https://" + GOATCOUNTER_CODE + ".goatcounter.com/count");
+    document.head.appendChild(gc);
+  }
+
   /* ---- mobile hamburger nav ---- */
   var burger = document.querySelector(".burger");
   var links = document.getElementById("navlinks");

@@ -65,17 +65,23 @@ Photographs via [Wikimedia Commons](https://commons.wikimedia.org/), used under 
 Video reporting: [Unfiltered by Samdish](https://www.youtube.com/@UNFILTEREDbySamdish) (embedded from
 YouTube). Day-25 reel: Sonam Wangchuk via Instagram (embedded). All media belongs to its creators.
 
-## Analytics
-Vercel **Web Analytics** + **Speed Insights** (both free on Hobby), loaded from the same-origin
-`/_vercel/…` paths in each page's `<head>`. They only return data on a Vercel deployment —
-locally those paths 404, which is expected.
+## Analytics — GoatCounter
+Vercel Analytics/Speed Insights were removed: their `/_vercel/insights/*` paths are on most
+ad-blocker lists (uBlock, Brave, AdGuard), so they routinely report nothing regardless of config.
 
-**They must each be switched on in the Vercel dashboard** (Project → Analytics → Enable, and
-Project → Speed Insights → Enable), otherwise the scripts load but nothing is recorded.
+Now using [GoatCounter](https://www.goatcounter.com) — free, cookieless, ~3 KB, no consent banner.
 
-> CSP note: `connect-src` **must** keep `'self'` — the scripts beacon to `/_vercel/insights/view`
-> and `/_vercel/speed-insights/vitals` on the same origin. Dropping `'self'` silently kills all
-> analytics while leaving the page looking fine.
+**Setup (once):**
+1. Create a free site at [goatcounter.com](https://www.goatcounter.com) → you get `xxxx.goatcounter.com`.
+2. Put that `xxxx` into `GOATCOUNTER_CODE` at the top of `js/main.js`. That's the only edit.
+3. Dashboard lives at `https://xxxx.goatcounter.com`.
+
+Left empty, no analytics script loads at all. CSP is already wired for it
+(`gc.zgo.at` in `script-src`; `*.goatcounter.com` in `connect-src` + `img-src`), so no
+security changes are needed when you add your code.
+
+> Reality check: **every** client-side analytics tool undercounts — ad blockers strip them.
+> Expect roughly 20–40% of visits to go unrecorded. Nothing to fix; it's the medium.
 
 ## Self-check
 Open `claude-pm.html?selftest` and check the console for `petition self-check passed ✅`.
