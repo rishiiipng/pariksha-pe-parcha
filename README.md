@@ -1,4 +1,5 @@
-# 🪳 less humanity than a chatbot
+# 🪳 pariksha pe parcha
+### *less humanity than a chatbot*
 
 A Gen-Z satire site roasting the Government of India's handling of the **2026 NEET-UG paper-leak
 scandal** and the ongoing Jantar Mantar protests. Harsh jokes, **real cited facts**, and a joke
@@ -10,21 +11,12 @@ Plain static site — **no build step, no dependencies, no env vars**.
 - Full experience (embeds + live counter need `http(s)`): run
   `python -m http.server 8123` and open `http://localhost:8123`.
 
-## Deploy to Vercel
-Already configured — `vercel.json` ships the security headers (CSP, HSTS, nosniff,
-frame-ancestors, permissions-policy).
-1. Import the repo at [vercel.com/new](https://vercel.com/new).
-2. Framework preset **Other** · Build command **(empty)** · Output directory **`.`**
-3. Deploy. No environment variables, no secrets, nothing else to set.
-
-Or from the CLI: `npx vercel --prod`
-
 ## Pages
 | file | what |
 |------|------|
 | `index.html` | hero, animated stat counters, 30-sec TL;DR |
 | `timeline.html` | "the receipts" — tap-to-expand timeline (May→July), each node links a real source |
-| `crimes.html` | "hall of shame" — the 5 worst things + editorial illustrations + govt-vs-AI scoreboard |
+| `crimes.html` | "hall of shame" — the worst of it + real protest photos + govt-vs-AI scoreboard |
 | `claude-pm.html` | satirical manifesto + the joke petition |
 | `css/style.css` | shared theme (mobile-first) |
 | `js/main.js` | nav, count-up, **dynamic day counters** (`data-since`), scroll-reveal, 🪳 easter egg |
@@ -35,7 +27,7 @@ Design is a **neo-brutalist pop** theme (chunky pressable buttons, hard offset s
 ## The petition (live & server-synced)
 The "Claude for PM" counter is a **real shared tally** — everyone who clicks increments the same global
 number, synced to a public counter service ([abacus](https://abacus.jasoncameron.dev),
-namespace `parikshapeparcha`, key `claude-for-pm-india`). It stores **only an integer** — no names,
+namespace `parikshapeparcha`, key `claude-for-pm-india-2026`). It stores **only an integer** — no names,
 emails, or personal data, ever. It appears on both the homepage and `claude-pm.html` (same count).
 - If the service is unreachable it falls back to the last-seen count and shows a notice.
 - To **reset it to zero**, change `KEY` in `js/petition.js` to a fresh string.
