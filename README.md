@@ -1,0 +1,53 @@
+# 🪳 less humanity than a chatbot
+
+A Gen-Z satire site roasting the Government of India's handling of the **2026 NEET-UG paper-leak
+scandal** and the ongoing Jantar Mantar protests. Harsh jokes, **real cited facts**, and a joke
+petition to make Claude the PM of India.
+
+## Run it
+It's a plain static site — no build step, no server needed.
+- **Double-click `index.html`**, or drag it into a browser.
+- To host: drop the whole folder on GitHub Pages / Netlify / any static host.
+
+## Pages
+| file | what |
+|------|------|
+| `index.html` | hero, animated stat counters, 30-sec TL;DR |
+| `timeline.html` | "the receipts" — tap-to-expand timeline (May→July), each node links a real source |
+| `crimes.html` | "hall of shame" — the 5 worst things + editorial illustrations + govt-vs-AI scoreboard |
+| `claude-pm.html` | satirical manifesto + the joke petition |
+| `css/style.css` | shared theme (mobile-first) |
+| `js/main.js` | nav, count-up, **dynamic day counters** (`data-since`), scroll-reveal, 🪳 easter egg |
+| `js/petition.js` | **live, server-synced** petition counter (see below) |
+
+Design is a **neo-brutalist pop** theme (chunky pressable buttons, hard offset shadows, highlighter accents).
+
+## The petition (live & server-synced)
+The "Claude for PM" counter is a **real shared tally** — everyone who clicks increments the same global
+number, synced to a public counter service ([abacus](https://abacus.jasoncameron.dev),
+namespace `parikshapeparcha`, key `claude-for-pm-india`). It stores **only an integer** — no names,
+emails, or personal data, ever. It appears on both the homepage and `claude-pm.html` (same count).
+- If the service is unreachable it falls back to the last-seen count and shows a notice.
+- To **reset it to zero**, change `KEY` in `js/petition.js` to a fresh string.
+- To use your own backend instead, swap the `GET`/`HIT` URLs in `js/petition.js`.
+
+## Real footage
+`timeline.html` embeds playable **YouTube videos from independent journalists** (Unfiltered by Samdish).
+Swap/add clips by editing the `.embed-grid` iframes (use `youtube-nocookie.com/embed/<VIDEO_ID>`).
+
+## Ground rules baked in
+- **Every hard fact links to a real source.** Sources: [2026 NEET controversy](https://en.wikipedia.org/wiki/2026_NEET_controversy),
+  [2026 Delhi Jantar Mantar protests](https://en.wikipedia.org/wiki/2026_Delhi_Jantar_Mantar_protests),
+  plus linked news reports.
+- **No fabricated photos.** On-page images are original SVG illustrations (clearly captioned as such);
+  real footage is embedded/linked from its actual source.
+- **The petition** stores only a count — no personal data.
+- Persistent **satire disclaimer** + a contact email (`Deyayush599@gmail.com`) in every footer.
+
+## Share as Instagram story
+The petition's **"share as IG story"** button renders a 1080×1920 PNG with a random anti-govt roast
+quote (10 in the rotation, edit `QUOTES` in `js/petition.js`). On a phone it opens the native share
+sheet (post straight to your IG story); on desktop it downloads the PNG.
+
+## Self-check
+Open `claude-pm.html?selftest` and check the console for `petition self-check passed ✅`.

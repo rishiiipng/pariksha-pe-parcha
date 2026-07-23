@@ -1,0 +1,21 @@
+# secrets / env (none in this project, but never commit these)
+.env
+.env.*
+*.key
+*.pem
+*.p12
+secrets.json
+credentials.json
+
+# os / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+
+# logs / deps / build
+*.log
+node_modules/
+dist/
